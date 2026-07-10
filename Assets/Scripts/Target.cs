@@ -31,7 +31,12 @@ public class Target : MonoBehaviour
 
     private void Update()
     {
-        if (_roadPoints[_pointInt] == transform.position) 
+        if (_roadPoints == null || _roadPoints.Length == 0)
+        {
+            return;
+        }
+
+        if (Vector3.Distance(transform.position, _roadPoints[_pointInt]) <= 0.2f ) 
         {
             _pointInt++;
 
@@ -43,7 +48,8 @@ public class Target : MonoBehaviour
 
         else
         {
-            transform.position += _roadPoints[_pointInt] * _moveSpeed * Time.deltaTime;
+            Vector3 direction = (_roadPoints[_pointInt] - transform.position).normalized;
+            transform.position += direction * _moveSpeed * Time.deltaTime;
         }
     }
 }

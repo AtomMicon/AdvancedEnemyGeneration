@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed = 3f;
+    [SerializeField] private float _moveSpeed = 4f;
+    [SerializeField] private float _destroyDistance = 0.4f;
 
     private Target _target;
 
@@ -13,9 +14,19 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+
         if (_target != null)
         {
-            transform.position += _target.transform.position * _moveSpeed * Time.deltaTime;
+            float distance = Vector3.Distance(transform.position, _target.transform.position);
+
+            if (distance <= _destroyDistance)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Vector3 direction = (_target.transform.position  - transform.position).normalized;
+            transform.position += direction * _moveSpeed * Time.deltaTime;
         }
     }
 }
