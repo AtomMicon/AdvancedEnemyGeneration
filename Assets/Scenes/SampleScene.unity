@@ -225,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 283804128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.21352, y: -0, z: -0.32097}
+  m_LocalPosition: {x: 0.21352, y: -0.61, z: -0.32097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -586,7 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   _enemyPrefab: {fileID: 5627162957719998612, guid: 4453b336edbeab54f9b9887535a352df, type: 3}
   _spawnPoint: {x: 3.53, y: 0, z: 3.09}
-  _spawnIntervalSec: 2
+  _spawnIntervalSec: 1.3
   _spawnHeightOffset: 1
   _target: {fileID: 467527301}
 --- !u!4 &983795725
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
   _enemyPrefab: {fileID: 5627162957719998612, guid: 4453b336edbeab54f9b9887535a352df, type: 3}
   _spawnPoint: {x: 0.6, y: 0, z: -3.4}
-  _spawnIntervalSec: 2
+  _spawnIntervalSec: 2.7
   _spawnHeightOffset: 1
   _target: {fileID: 467527301}
 --- !u!4 &1891406286
